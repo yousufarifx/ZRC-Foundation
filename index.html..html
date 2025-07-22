@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZRC Foundation - Badlo Zindagi Ke Rang</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'zrc-green': '#43A047',
+                        'zrc-orange': '#43A047',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://drive.google.com/thumbnail?id=10EokmltqGJCIjGK5xg4LrWmL500lyD7M&sz=w1000');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .program-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .team-card:hover {
+            transform: scale(1.03);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <img src="https://drive.google.com/thumbnail?id=1UsbyHZho1UpB2XWloU3aAdZDDIV_gaIR&sz=w1000" alt="ZRC Foundation Logo" class="h-36 md:h-44 w-auto bg-white">
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-zrc-green font-medium hover:text-zrc-orange transition">Home</a>
+                    <a href="#mission" class="text-gray-600 hover:text-zrc-green transition">Our Mission</a>
+                    <a href="#programs" class="text-gray-600 hover:text-zrc-green transition">Programs</a>
+                    <a href="#about" class="text-gray-600 hover:text-zrc-green transition">About Us</a>
+                    <a href="#contact" class="text-gray-600 hover:text-zrc-green transition">Contact</a>
+                </div>
+                
+                <a href="#contact" class="hidden md:block bg-zrc-green text-white px-6 py-2 rounded-full hover:bg-green-600 transition font-medium">Donate Now</a>
+                
+                <button id="mobile-menu-button" class="md:hidden text-zrc-green focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="#home" class="block py-2 text-zrc-green font-medium">Home</a>
+                <a href="#mission" class="block py-2 text-gray-600">Our Mission</a>
+                <a href="#programs" class="block py-2 text-gray-600">Programs</a>
+                <a href="#about" class="block py-2 text-gray-600">About Us</a>
+                <a href="#contact" class="block py-2 text-gray-600">Contact</a>
+                <a href="#contact" class="block mt-2 bg-zrc-green text-white px-6 py-2 rounded-full w-max font-medium">Donate Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center text-white">
+        <div class="container mx-auto px-6 text-center md:text-left">
+            <div class="max-w-2xl">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">Badlo <span class="text-zrc-orange">Zindagi</span> Ke <span class="text-zrc-green">Rang</span></h1>
+                <p class="text-xl md:text-2xl mb-8">Empowering communities through education and opportunity in Pakistan</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
+                    <a href="#programs" class="bg-zrc-orange hover:bg-orange-600 text-white px-8 py-3 rounded-full font-medium transition">Join the Movement</a>
+                    <a href="#contact" class="border-2 border-white hover:bg-white hover:text-zrc-green px-8 py-3 rounded-full font-medium transition">Volunteer Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section id="mission" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-zrc-green mb-6">Our Mission</h2>
+                <div class="w-24 h-1 bg-zrc-orange mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <img src="https://drive.google.com/thumbnail?id=19xSzz24JUoxej6QrtCILlHLLolwi9ww-&sz=w1000" alt="Children learning" class="rounded-2xl shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl md:text-3xl font-semibold text-zrc-green mb-6">Transforming Zindagis with Education, Empowerment & Hope</h3>
+                    <p class="text-gray-600 mb-6">ZRC Foundation (Zindagi ke Rang Charitable Foundation) is a youth-led nonprofit transforming lives in underserved communities across Pakistan. We focus on providing free education, empowering youth and women, organizing sports and creative activities for children, and improving community wellbeing through practical initiatives like water dispensers and awareness drives..</p>
+                    <p class="text-gray-600 mb-6">Our volunteers work tirelessly to provide free educational resources, mentorship programs, and community development initiatives that create sustainable change.</p>
+                    <div class="bg-zrc-green bg-opacity-10 p-6 rounded-xl border-l-4 border-zrc-orange">
+                        <p class="text-zrc-green font-medium italic">"خَيْرُ النَّاسِ أَنْفَعُهُمْ لِلنَّاسِ
+Khayrun-nāsi anfaʿuhum lil-nās
+“The best of people are those who are most beneficial to others.”
+
+— Prophet Muhammad ﷺ
+Source: Musnad Ahmad, Hadith 23408 — Classified as Sahih (authentic) by Al-Albani"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-zrc-green mb-4">Our Programs</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Low-cost, high-impact initiatives led by passionate volunteers</p>
+                <div class="w-24 h-1 bg-zrc-orange mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Program 1 -->
+                <div class="program-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 bg-zrc-green flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-zrc-green mb-3">📘 Ilm Ki Roshni (Light of Knowledge)</h3>
+                        <p class="text-gray-600 mb-4">Providing free educational support to underprivileged children after school in low-income and remote areas..</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-zrc-green bg-opacity-10 text-zrc-green text-xs px-3 py-1 rounded-full">Education</span>
+                            <span class="bg-zrc-orange bg-opacity-10 text-zrc-orange text-xs px-3 py-1 rounded-full">KG-12</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Program 2 -->
+                <div class="program-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 bg-zrc-orange flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-zrc-green mb-2">🍛 ZRC Ration & Meal Drive</h3>
+                        <p class="text-gray-600 mb-4">We support individuals and families of all ages through regular ration distributions, freshly prepared meals in underserved areas, and emergency food assistance during floods, rainstorms, and other crises.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-zrc-green bg-opacity-10 text-zrc-green text-xs px-3 py-1 rounded-full">Food Aid</span>
+                            <span class="bg-zrc-orange bg-opacity-10 text-zrc-orange text-xs px-3 py-1 rounded-full">All Ages</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Program 3 -->
+                <div class="program-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 bg-zrc-green flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-zrc-green mb-2">💧 Community Care Projects</h3>
+                        <p class="text-gray-600 mb-4">We enhance community well-being by installing water coolers in heat-prone areas, providing rain-related street assistance, supporting healthcare and hygiene needs including disability access, and improving shared public spaces such as parks, footpaths, and mosques.
+                        
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-zrc-green bg-opacity-10 text-zrc-green text-xs px-3 py-1 rounded-full">Development</span>
+                            <span class="bg-zrc-orange bg-opacity-10 text-zrc-orange text-xs px-3 py-1 rounded-full">All Ages</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-16">
+                <a href="#contact" class="inline-block bg-zrc-green hover:bg-green-600 text-white px-8 py-3 rounded-full font-medium transition">Become a Volunteer</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-zrc-green mb-4">About Us</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Meet the passionate team behind ZRC Foundation</p>
+                <div class="w-24 h-1 bg-zrc-orange mx-auto mt-4"></div>
+            </div>
+            
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold text-zrc-green mb-6 text-center">Our Story</h3>
+                <div class="max-w-4xl mx-auto text-center">
+                    <p class="text-gray-600 mb-6">ZRC Foundation began when Yousuf Arif, at 17, started tutoring three underprivileged children at home. Inspired by this small act, he envisioned a nonprofit that would go beyond education—supporting community wellbeing through food, clothing, healthcare, and more.</p>
+                    <p class="text-gray-600">Today, ZRC is a youth-led movement working to uplift lives across Pakistan through compassion, education, and service.</p>
+                </div>
+            </div>
+            
+            <h3 class="text-2xl font-semibold text-zrc-green mb-8 text-center">The Visionary Behind ZRC</h3>
+            <div class="max-w-lg mx-auto">
+                <div class="team-card bg-white p-6 rounded-xl shadow-md transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-20 h-20 rounded-full bg-zrc-green bg-opacity-10 flex items-center justify-center text-zrc-green text-3xl mr-4">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg">Yousuf Arif</h4>
+                            <p class="text-zrc-orange text-sm">Founder & Chairperson</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">Yousuf is an 18-year-old A-Level student, entrepreneur, and youth changemaker who founded ZRC Foundation with a vision to uplift underserved communities across Pakistan. He leads the organization's mission, outreach, and strategic direction—driven by the belief that small efforts can create lasting change.</p>
+                </div>
+            </div>
+            
+            <div class="mt-16 bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-zrc-green p-8 md:p-12 text-white">
+                        <h3 class="text-2xl font-bold mb-4">Become a Volunteer — Make a Real Difference</h3>
+                        <p class="mb-6">Join ZRC Foundation's growing network of youth-led changemakers working to uplift lives across Pakistan.</p>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-white bg-opacity-20 rounded-full w-10 h-10 flex items-center justify-center mr-4">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">Flexible & Impactful</p>
+                                    <p class="text-sm opacity-90">Contribute your time and skills — on your own schedule — to causes that truly matter.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-white bg-opacity-20 rounded-full w-10 h-10 flex items-center justify-center mr-4">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">See the Impact</p>
+                                    <p class="text-sm opacity-90">From teaching kids to feeding families, every effort you make creates visible, lasting change.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-white bg-opacity-20 rounded-full w-10 h-10 flex items-center justify-center mr-4">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">Grow With a Purposeful Community</p>
+                                    <p class="text-sm opacity-90">Work alongside passionate volunteers, gain experience, and be part of something bigger than yourself.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-8 md:p-12">
+                        <h3 class="text-2xl font-bold text-zrc-green mb-6">Join the Movement</h3>
+                        <form class="space-y-4">
+                            <div>
+                                <label for="full-name" class="block text-gray-700 mb-1">Full Name</label>
+                                <input type="text" id="full-name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-zrc-green focus:border-transparent">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 mb-1">Email Address</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-zrc-green focus:border-transparent">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-gray-700 mb-1">Phone Number</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-zrc-green focus:border-transparent">
+                            </div>
+                            <div>
+                                <label for="city" class="block text-gray-700 mb-1">City</label>
+                                <input type="text" id="city" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-zrc-green focus:border-transparent">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-gray-700 mb-1">Why do you want to volunteer? (Optional)</label>
+                                <textarea id="message" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-zrc-green focus:border-transparent"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-zrc-green hover:bg-green-600 text-white py-3 rounded-full font-medium transition mt-4">Join the Movement</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-zrc-green mb-4">Get In Touch</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">We'd love to hear from you! Reach out for volunteer opportunities, partnerships, or questions.</p>
+                <div class="w-24 h-1 bg-zrc-orange mx-auto mt-4"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto bg-gray-50 rounded-xl shadow-md overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8 md:p-12 bg-zrc-green text-white">
+                        <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt mt-1 mr-4 text-zrc-orange"></i>
+                                <div>
+                                    <p class="font-medium">Headquarters</p>
+                                    <p class="text-sm opacity-90">Mustafa Street Block B North Nazimabad</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-envelope mt-1 mr-4 text-zrc-orange"></i>
+                                <div>
+                                    <p class="font-medium">Email Us</p>
+                                    <p class="text-sm opacity-90">zrc.foundation@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fab fa-whatsapp mt-1 mr-4 text-zrc-orange"></i>
+                                <div>
+                                    <p class="font-medium">WhatsApp</p>
+                                    <p class="text-sm opacity-90">+92 309 8265550</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-10">
+                            <h4 class="font-bold mb-4">Follow Our Journey</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center hover:bg-opacity-30 transition">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center hover:bg-opacity-30 transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center hover:bg-opacity-30 transition">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2 p-8 md:p-12">
+                        <h3 class="text-2xl font-bold text-zrc-green mb-6">Send Us a Message</h3>
+                        <form>
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 mb-2">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-zrc-green focus:border-transparent">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 mb-2">Email Address</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-zrc-green focus:border-transparent">
+                            </div>
+                            <div class="mb-4">
+                                <label for="subject" class="block text-gray-700 mb-2">Subject</label>
+                                <select id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-zrc-green focus:border-transparent">
+                                    <option value="">Select an option</option>
+                                    <option value="volunteer">Volunteer Inquiry</option>
+                                    <option value="donation">Donation Inquiry</option>
+                                    <option value="partnership">Partnership Opportunity</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 mb-2">Message</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-zrc-green focus:border-transparent"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-zrc-green hover:bg-green-600 text-white py-3 rounded-full font-medium transition">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-zrc-green text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="md:flex md:justify-between">
+                <div class="mb-8 md:mb-0">
+                    <div class="mb-4 flex justify-center">
+                        <img src="https://drive.google.com/thumbnail?id=1UsbyHZho1UpB2XWloU3aAdZDDIV_gaIR&sz=w1000" alt="ZRC Foundation Logo" class="h-48 w-auto">
+                    </div>
+                    <p class="max-w-xs opacity-80 text-center mx-auto">Badlo Zindagi Ke Rang - Changing lives through education and community empowerment.</p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8 text-center md:text-left">
+                    <div>
+                        <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#home" class="opacity-80 hover:opacity-100 transition">Home</a></li>
+                            <li><a href="#mission" class="opacity-80 hover:opacity-100 transition">Our Mission</a></li>
+                            <li><a href="#programs" class="opacity-80 hover:opacity-100 transition">Programs</a></li>
+                            <li><a href="#about" class="opacity-80 hover:opacity-100 transition">About Us</a></li>
+                            <li><a href="#contact" class="opacity-80 hover:opacity-100 transition">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold text-lg mb-4">Programs</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="opacity-80 hover:opacity-100 transition">📘 Ilm Ki Roshni (Light of Knowledge)</a></li>
+                            <li><a href="#" class="opacity-80 hover:opacity-100 transition">🍛 ZRC Ration & Meal Drive</a></li>
+                            <li><a href="#" class="opacity-80 hover:opacity-100 transition">💧 Community Care Projects</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold text-lg mb-4">Support</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="opacity-80 hover:opacity-100 transition">Donate</a></li>
+                            <li><a href="#" class="opacity-80 hover:opacity-100 transition">Volunteer</a></li>
+                            <li><a href="#" class="opacity-80 hover:opacity-100 transition">Partner With Us</a></li>
+                            <li><a href="#" class="opacity-80 hover:opacity-100 transition">Careers</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white border-opacity-20 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm opacity-80 mb-4 md:mb-0">© 2025 ZRC Foundation. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="opacity-80 hover:opacity-100 transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="opacity-80 hover:opacity-100 transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="opacity-80 hover:opacity-100 transition"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 w-14 h-14 bg-zrc-orange text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 text-xl">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
